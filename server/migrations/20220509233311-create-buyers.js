@@ -83,7 +83,7 @@ module.exports = {
           key: 'id',
         },
         onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
+        onDelete: 'CASCADE',
       },
       confirm: {
         type: Sequelize.BOOLEAN,
