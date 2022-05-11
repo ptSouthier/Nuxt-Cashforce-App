@@ -67,6 +67,14 @@ module.exports = {
       situationDate: {
         type: Sequelize.STRING,
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
       cnpjId: {
         allowNull: false,
         type: Sequelize.INTEGER,
