@@ -17,55 +17,55 @@ module.exports = {
         type: Sequelize.STRING,
       },
       cashforceTax: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       responsibleName: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       responsibleEmail: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       responsiblePosition: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       responsiblePhone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       responsibleMobile: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       website: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       postalCode: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       number: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       complement: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       neighborhood: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       city: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       state: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       phoneNumber: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       situation: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       situationDate: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       cnpjId: {
         allowNull: false,
@@ -82,7 +82,7 @@ module.exports = {
         defaultValue: true,
       },
       email: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
     });
 
