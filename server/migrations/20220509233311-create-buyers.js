@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const BuyersTable = await queryInterface.createTable('Buyers', {
+    await queryInterface.createTable('Buyers', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -93,11 +93,9 @@ module.exports = {
         type: Sequelize.STRING,
       },
     });
-
-    return BuyersTable;
   },
 
-  async down (queryInterface, Sequelize) {
+  async down (queryInterface, _Sequelize) {
     await queryInterface.dropTable('Buyers');
   }
 };
