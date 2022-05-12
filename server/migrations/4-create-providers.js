@@ -98,9 +98,7 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       email: {
-        allowNull: false,
         type: Sequelize.STRING,
-        unique: true,
       },
     });
   },
