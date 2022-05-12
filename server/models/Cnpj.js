@@ -6,8 +6,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Cnpj.associate = (models) => {
-    Cnpj.belongsTo(models.Buyer,
-      { foreignKey: 'cnpjId', as: 'buyer' });
+    Cnpj.hasOne(models.Buyer, { foreignKey: 'cnpjId', as: 'buyer' });
+    Cnpj.hasOne(models.Provider, { foreignKey: 'cnpjId', as: 'provider' });
+    Cnpj.hasOne(models.Sponsor, { foreignKey: 'cnpjId', as: 'sponsor' });
   };
 
   return Cnpj;
