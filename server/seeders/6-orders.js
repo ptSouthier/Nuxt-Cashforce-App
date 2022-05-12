@@ -6,7 +6,7 @@ module.exports = {
       {
         orderNfId: '1605181324132',
         orderNumber: '18153',
-        emissionDate: new Date('2020-10-30T11:00:00-03:00'),
+        emissionDate: '2020-10-30T11:00:00-03:00',
         emitedTo: '22843980000127',
         nNf: '18153',
         CTE: '',
@@ -23,7 +23,7 @@ module.exports = {
       {
         orderNfId: '160518132413',
         orderNumber: '18157',
-        emissionDate: new Date('2020-11-04T15:32:35-02:00'),
+        emissionDate: '2020-11-04T15:32:35-02:00',
         emitedTo: '35705180000272',
         nNf: '18157',
         CTE: '',
@@ -40,7 +40,7 @@ module.exports = {
       {
         orderNfId: '1605181324130',
         orderNumber: '222795',
-        emissionDate: new Date('2020-11-10'),
+        emissionDate: '2020-11-10',
         emitedTo: '00418477002640',
         nNf: '18184',
         CTE: '',
