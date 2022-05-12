@@ -12,6 +12,7 @@ module.exports = {
       orderNfId: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique: true,
       },
       orderNumber: {
         allowNull: false,
@@ -19,12 +20,15 @@ module.exports = {
       },
       orderPath: {
         type: Sequelize.STRING,
+        unique: true,
       },
       orderFileName: {
         type: Sequelize.STRING,
+        unique: true,
       },
       orderOriginalName: {
         type: Sequelize.STRING,
+        unique: true,
       },
       emissionDate: {
         type: Sequelize.STRING,
