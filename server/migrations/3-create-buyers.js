@@ -82,8 +82,6 @@ module.exports = {
           model: 'Cnpjs',
           key: 'id',
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
       },
       confirm: {
         type: Sequelize.BOOLEAN,

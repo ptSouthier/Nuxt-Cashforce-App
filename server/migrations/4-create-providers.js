@@ -94,8 +94,6 @@ module.exports = {
           model: 'Cnpjs',
           key: 'id',
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
       },
       email: {
         type: Sequelize.STRING,
