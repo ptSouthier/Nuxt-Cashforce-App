@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Buyer.associate = (models) => {
     Buyer.hasOne(models.Cnpj,
-      { foreignKey: 'cnpjId', as: 'cnpjs' });
+      { foreignKey: 'cnpjId', as: 'cnpj' });
   };
 
   return Buyer;
