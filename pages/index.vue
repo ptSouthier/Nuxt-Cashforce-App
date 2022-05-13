@@ -1,5 +1,6 @@
 <template>
   <div class="flex items-center flex-col">
+    <HeaderBar />
     <SideBar />
     <ul>
       <li v-for="order in orders" :key="order.id">
