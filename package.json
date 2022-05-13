@@ -8,6 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "server": "node ./server/index.js",
+    "build:db": "npx sequelize db:migrate && npx sequelize db:seed:all",
+    "undo:db": "npx sequelize db:seed:undo:all && npx sequelize db:migrate:undo:all",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
