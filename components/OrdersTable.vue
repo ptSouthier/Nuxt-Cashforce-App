@@ -14,8 +14,8 @@
     <tbody>
       <tr v-for="order in orders" :key="order.id" class="shadow rounded-sm h-11">
         <td class="table-data-style">{{ order.orderNfId }}</td>
-        <td class="table-data-style">{{ order.buyerId }}</td>
-        <td class="table-data-style">{{ order.providerId }}</td>
+        <td class="table-data-style">{{ order.buyer.name }}</td>
+        <td class="table-data-style">{{ order.provider.name }}</td>
         <td class="table-data-style">{{ order.emissionDate }}</td>
         <td class="table-data-style green-text">{{ order.value }}</td>
         <td class="table-data-style green-text">{{ order.orderStatusBuyer }}</td>

@@ -1,5 +1,5 @@
 const { StatusCodes } = require('http-status-codes');
-const { Order } = require('../models');
+const { Order, Buyer, Provider } = require('../models');
 const orderStatusBuyerDescription = [
   'Pendente de confirmação',
   'Pedido confirmado',
@@ -13,7 +13,12 @@ const orderStatusBuyerDescription = [
 ];
 
 const getAll = async () => {
-  const orders = await Order.findAll({});
+  const orders = await Order.findAll({
+    include: [
+      { model: Buyer, as: 'buyer' },
+      { model: Provider, as: 'provider' }
+    ]
+  });
 
   orders.map((order) => {
     const orderStatusBuyerInteger = parseInt(order.orderStatusBuyer);
