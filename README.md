@@ -34,7 +34,7 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para exec
   mkdir ptSouthier-code-challenge
 ```
 
-<br>
+<br><br>
 
 2. Entre no diretório que acabou de criar e depois clone o projeto:
 ```javascript
@@ -42,7 +42,7 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para exec
   git clone git@github.com:ptSouthier/Cashforce-Code-Challenge.git
 ```
 
-<br>
+<br><br>
 
 3. Agora entre no diretório do projeto clonado e rode o comando **npm install** para instalar as dependências do projeto _(não se preocupe, você poderá excluir tudo depois que utilizar o app)_. 
 ```javascript
@@ -50,11 +50,11 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para exec
   npm install
 ```
 
-<br>
+<br><br>
 
 4. Agora, com as dependências do projeto já instaladas, atente-se aqui à alguns detalhes **IMPORTANTES**:
-  * Caso você já possua em sua máquina uma [Imagem Docker MySQL](https://hub.docker.com/_/mysql) em execução, será necessário criar na raíz do projeto um arquivo _.env_ para configurarmos as variáveis de ambiente de acordo com seus dados de acesso. <br>
-  * Caso **NÃO** possua a Imagem MySQL, não tem problema algum, apenas avance para a próxima etapa sem preocupação! <br>
+  * Caso **NÃO possua** a Imagem MySQL, apenas avance para a **etapa 5** sem preocupação. <br>
+  * Caso você **JÁ possua** em sua máquina uma [Imagem Docker MySQL](https://hub.docker.com/_/mysql) em execução, será necessário criar na raíz do projeto um arquivo _.env_ para configurarmos as variáveis de ambiente de acordo com seus dados de acesso. <br>
 
 Copie o conteúdo abaixo e cole no arquivo _.env_ criado, substituindo os _//comentários_ por suas credenciais de acesso ao MySQL.
 ```javascript
@@ -64,50 +64,53 @@ Copie o conteúdo abaixo e cole no arquivo _.env_ criado, substituindo os _//com
   DATABASE_PORT= //insira logo após o sinal de igual(=) a PORT da sua Imagem MySQL(por padrão, a PORT é 3306)!
 ```
 
-<br>
-
 _Se você já possui uma Imagem Docker MySQL e configurou o arquivo _.env_ como orientado acima, pule a próxima etapa._ <br>
 
-5. Para criarmos uma [Imagem Docker MySQL](https://hub.docker.com/_/mysql) e podermos estruturar um Banco de Dados do zero, existe um arquivo na raíz do projeto que nos auxiliará e fará isso por nós! O arquivo é o _docker-compose.yml_ e para executá-lo, rode o comando a seguir em seu terminal e aguarde até o fim da instalação!
+<br><br>
+
+
+5. Para criarmos uma [Imagem Docker MySQL](https://hub.docker.com/_/mysql) e podermos estruturar um Banco de Dados do zero, existe um arquivo na raíz do projeto que nos auxiliará e fará isso por nós! O arquivo é o _docker-compose.yml_ e para executá-lo, rode o comando a seguir em seu terminal e aguarde até o fim da instalação.
 ```javascript
-  docker-compose up -d //A flag -d fará com que o container criado para o projeto rode em background, sem manter seu terminal "preso" à execução.
+  docker-compose up -d
 ```
+_A flag -d fará com que o container criado para o projeto rode em background, sem manter seu terminal "preso" à execução._
 
-<br>
+<br><br>
 
-6. Agora que estamos com o Banco de Dados MySQL configurado e em execução, vamos criar suas tabelas com os devidos relacionamentos e já populá-las para podermos consultar seu conteúdo em alguns instantes! Rode o comando a seguir e aguarde sua finalização.
+6. Agora que estamos com o Banco de Dados MySQL configurado e em execução, vamos criar suas tabelas com os devidos relacionamentos e já populá-las para podermos consultar seu conteúdo em alguns instantes com nossa API. Rode o comando a seguir e aguarde sua finalização.
 ```javascript
   npm run build:db
 ```
 
-<br>
+<br><br>
 
-7. Nesta etapa subiremos nosso servidor Back-End com nossa API na rota _**localhost:3001**(é possível alterar a PORT 3001 caso enfrente algum problema, basta voltar ao passo 4 deste guia e alterar o valor da variável de ambiente API_PORT no arquivo _.env_ para alguma PORT que não esteja em uso)_! <br>
-Após a execução do comando, o terminal utilizado ficará rodando nossa API, não interrompa sua execução, execute outro terminal para seguir para o próximo passo.
+7. Nesta etapa subiremos nosso servidor Back-End com nossa API na rota _**localhost:3001** (é possível alterar a PORT 3001 caso enfrente algum problema. Basta voltar ao passo 4 deste guia e alterar o valor da variável de ambiente API_PORT no arquivo _.env_ para alguma PORT que não esteja em uso)_. <br><br>
 ```javascript
-  npm run server //Se aparecer em seu terminal a mensagem: "Server is running on PORT: 3001!" significa que nossa API está funcionando!
+  npm run server
 ```
 
-<br>
+_Se aparecer em seu terminal a mensagem: "Server is running on PORT: 3001!" significa que nossa API está funcionando e este terminal permanecerá a executando. Não interrompa sua execução, abra outro terminal no diretório do projeto e siga para o próximo passo._
 
-8. Enfim, vamos colocar a aplicação Nuxt.js para rodar para que possamos acessá-la e visualizar nossos dados recebidos da API! Após a execução do comando, aguarde o Nuxt te comunicar pelo terminal que está tudo funcionando e acesse em seu navegador a rota _localhost:3000_ ;)
+<br><br>
+
+8. Vamos colocar a aplicação Nuxt.js para rodar para que possamos acessá-la e visualizar nossos dados recebidos da API! Após a execução do comando, aguarde o Nuxt te comunicar pelo terminal que está tudo funcionando e acesse em seu navegador a rota _localhost:3000_ ;)
 ```javascript
   npm run dev
 ```
 
-<br>
+<br><br>
 
 9. Ao fim, para **REVERTER** os passos anteriores e **encerrar** todas as execuções que iniciamos, vamos começar interrompendo a execução da aplicação Nuxt e depois nosso servidor API, para desocuparmos ambos os terminais.
  * No terminal em que o Nuxt.js está em execução, aperte as teclas _CTRL + C_. Depois aperte as mesmas teclas no terminal do Servidor API.
 
-<br>
+<br><br>
 
 10. Para desfazermos nossas tabelas do Banco de Dados, vamos rodar o seguinte comando:
 ```javascript
   npm run undo:db
 ```
 
-<br>
+<br><br>
 
 11. Por fim, para que não tenhamos mais nenhuma execução relacionada ao projeto em nossa máquina, execute os seguintes comandos Docker em seu terminal, um por vez:
 ```javascript
