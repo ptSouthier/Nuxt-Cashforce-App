@@ -1,4 +1,4 @@
-# Boas vindas ao repositório Cashforce Code Challenge!
+# Boas vindas ao repositório Nuxt Cashforce App!
 ## Contexto
 
 Este projeto foi um Teste Técnico recebido através de um convite por e-mail da empresa [Cashforce](https://cashforce.com.br/).
@@ -39,14 +39,14 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para exec
 2. Entre no diretório que acabou de criar e depois clone o projeto:
 ```javascript
   cd ptSouthier-code-challenge
-  git clone git@github.com:ptSouthier/Cashforce-Code-Challenge.git
+  git clone git@github.com:ptSouthier/Nuxt-Cashforce-App.git
 ```
 
 <br><br>
 
 3. Agora entre no diretório do projeto clonado e rode o comando **npm install** para instalar as dependências do projeto _(não se preocupe, você poderá excluir tudo depois que utilizar o app)_. 
 ```javascript
-  cd Cashforce-Code-Challenge
+  cd Nuxt-Cashforce-App
   npm install
 ```
 
