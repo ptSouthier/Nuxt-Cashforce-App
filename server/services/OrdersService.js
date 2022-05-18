@@ -12,15 +12,8 @@ const orderStatusBuyerDescription = [
   'Pagamento Autorizado',
 ];
 
-const getAll = async () => {
-  const orders = await Order.findAll({
-    include: [
-      { model: Buyer, as: 'buyer' },
-      { model: Provider, as: 'provider' }
-    ]
-  });
-
-  orders.map((order) => {
+const formatOrdersData = (ordersArr) => {
+  ordersArr.map((order) => {
     const orderStatusBuyerInteger = parseInt(order.orderStatusBuyer);
     const valueInteger = parseInt(order.value);
     const formatedEmissionDate = new Date(order.emissionDate).toLocaleDateString('pt-br');
@@ -32,6 +25,17 @@ const getAll = async () => {
 
     return order;
   });
+};
+
+const getAll = async () => {
+  const orders = await Order.findAll({
+    include: [
+      { model: Buyer, as: 'buyer' },
+      { model: Provider, as: 'provider' }
+    ]
+  });
+
+  formatOrdersData(orders);
 
   return { status: StatusCodes.OK, data: orders };
 };
