@@ -40,6 +40,23 @@ const getAll = async () => {
   return { status: StatusCodes.OK, data: orders };
 };
 
+const getById = async (id) => {
+  const order = await Order.findOne({
+    where: { id },
+    include: [
+      { model: Buyer, as: 'buyer' },
+      { model: Provider, as: 'provider' }
+    ]
+  });
+
+  if (!order) {
+    return { status: StatusCodes.NOT_FOUND, message: `Order ID: ${id} does not exist.`};
+  };
+
+  return { status: StatusCodes.OK, data: order};
+};
+
 module.exports = {
   getAll,
+  getById,
 };
