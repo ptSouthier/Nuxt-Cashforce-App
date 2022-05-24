@@ -12,19 +12,17 @@ const orderStatusBuyerDescription = [
   'Pagamento Autorizado',
 ];
 
-const formatOrdersData = (ordersArr) => {
-  ordersArr.map((order) => {
-    const orderStatusBuyerInteger = parseInt(order.orderStatusBuyer);
-    const valueInteger = parseInt(order.value);
-    const formatedEmissionDate = new Date(order.emissionDate).toLocaleDateString('pt-br');
-    const valueToReal = valueInteger.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+const formatOrderData = (order) => {
+  const orderStatusBuyerInteger = parseInt(order.orderStatusBuyer);
+  const valueInteger = parseInt(order.value);
+  const formatedEmissionDate = new Date(order.emissionDate).toLocaleDateString('pt-br');
+  const valueToReal = valueInteger.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
-    order.orderStatusBuyer = orderStatusBuyerDescription[orderStatusBuyerInteger];
-    order.emissionDate = formatedEmissionDate;
-    order.value = valueToReal;
+  order.orderStatusBuyer = orderStatusBuyerDescription[orderStatusBuyerInteger];
+  order.emissionDate = formatedEmissionDate;
+  order.value = valueToReal;
 
-    return order;
-  });
+  return order;
 };
 
 const getAll = async () => {
@@ -35,7 +33,10 @@ const getAll = async () => {
     ]
   });
 
-  formatOrdersData(orders);
+  orders.map((order) => {
+    formatOrderData(order);
+    return order;
+  });
 
   return { status: StatusCodes.OK, data: orders };
 };
