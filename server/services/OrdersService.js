@@ -54,6 +54,8 @@ const getById = async (id) => {
     return { status: StatusCodes.NOT_FOUND, message: `Order ID: ${id} does not exist.`};
   };
 
+  formatOrderData(order);
+
   return { status: StatusCodes.OK, data: order};
 };
 
