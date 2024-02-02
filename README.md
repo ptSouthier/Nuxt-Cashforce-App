@@ -27,7 +27,7 @@ Para definição de variáveis de ambiente e maior versatilidade na instalação
 
 ## Instalação do projeto localmente
 
-Após cada um dos passos, haverá um exemplo do comando a ser digitado para executar o que está sendo orientado, caso enfrente qualquer dificuldade e o exemplo não seja suficiente, não hesite em me contatar em _patrick.southier@hotmail.com_!
+Após cada um dos passos, haverá um exemplo do comando a ser digitado para executar o que está sendo orientado, caso enfrente qualquer dificuldade e o exemplo não seja suficiente, não hesite em me contatar em _patrick.southier@outlook.com_!
 
 1. Abra o terminal e crie um diretório no local de sua preferência com o comando **mkdir** _nome-do-diretório_:
 ```javascript
@@ -52,7 +52,7 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para exec
 
 <br><br>
 
-4. Agora, com as dependências do projeto já instaladas, atente-se aqui à alguns detalhes **IMPORTANTES**:
+4. Agora, com as dependências do projeto já instaladas, atente-se aqui a alguns detalhes **IMPORTANTES**:
   * Caso **NÃO possua** a Imagem MySQL, apenas avance para a **etapa 5** sem preocupação. <br>
   * Caso você **JÁ possua** em sua máquina uma [Imagem Docker MySQL](https://hub.docker.com/_/mysql) em execução, será necessário criar na raíz do projeto um arquivo _.env_ para configurarmos as variáveis de ambiente de acordo com seus dados de acesso. <br>
 
